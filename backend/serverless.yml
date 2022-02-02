@@ -14,5 +14,7 @@ functions:
   app:
     handler: src/index.handler
     events:
-      - http: ANY /
-      - http: "ANY {proxy+}"
+      - http:
+          path: /{proxy+}
+          method: get
+          cors: true
