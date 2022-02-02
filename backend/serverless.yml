@@ -7,7 +7,7 @@ plugins:
 provider:
   name: aws
   runtime: nodejs14.x
-  stage: dev
+  stage: local
   region: us-east-2
 
 functions:
