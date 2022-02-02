@@ -1,8 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import axios from "axios";
 
-function App() {
+const App: React.FC = () => {
+  const [data, setData] = useState<string>("");
+  useEffect(() => {
+    const fetchResult = async () => {
+      const response = await axios.get("http://localhost:3000/local/hello");
+      setData(response.data);
+    };
+    fetchResult();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,8 +29,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <h1>{data}</h1>
     </div>
   );
-}
+};
 
 export default App;
