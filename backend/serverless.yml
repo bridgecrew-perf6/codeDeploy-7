@@ -2,12 +2,11 @@ service: backend-testtt
 
 plugins:
   - serverless-offline
-  - serverless-dotenv-plugin
   - serverless-aws-alias
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs12.x
   stage: local
   region: ap-southeast-2
 
