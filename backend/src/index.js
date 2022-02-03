@@ -4,7 +4,7 @@ const app = express();
 require("dotenv").config();
 
 app.get("/hello", (req, res) => {
-  res.send(`Hello EEARTH`);
+  res.send(`Hello EEEEARTH`);
 });
 
 module.exports.handler = serverless(app);
