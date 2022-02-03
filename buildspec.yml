@@ -10,13 +10,9 @@ phases:
   pre_build:
     commands:
       - cd backend
-      - npm i
-      - cd ../frontend
-      - npm i
+      - npm install
 
   build:
     commands:
-      - npm run build
-      - cd ../backend
-      - sls deploy -s local
-      - sls deploy -s dev
+      - sls deploy --alias local1
+      - sls deploy --alias local2
