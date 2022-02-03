@@ -11,12 +11,8 @@ phases:
     commands:
       - cd backend
       - npm i
-      - cd ../frontend
-      - npm i
 
   build:
     commands:
-      - npm run build
-      - cd ../backend
-      - sls deploy -s local --alias local1
-      - sls deploy -s local --alias local2
+      - sls deploy --alias local1
+      - sls deploy --alias local2
