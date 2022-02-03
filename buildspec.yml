@@ -14,4 +14,5 @@ phases:
 
   build:
     commands:
-      - sls deploy -s dev
+      - sls deploy -s dev --alias one
+      - sls deploy -s dev --alias two
