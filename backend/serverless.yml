@@ -3,6 +3,7 @@ service: backend-test
 plugins:
   - serverless-offline
   - serverless-dotenv-plugin
+  - serverless-aws-alias
 
 provider:
   name: aws
