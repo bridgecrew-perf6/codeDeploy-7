@@ -1,4 +1,4 @@
-service: backend
+service: backend-test
 
 plugins:
   - serverless-offline
