@@ -18,5 +18,5 @@ phases:
     commands:
       - npm run build
       - cd ../backend
-      - sls deploy -s local
-      - sls deploy -s dev
+      - sls deploy -s local --alias local
+      - sls deploy -s dev --alias dev
